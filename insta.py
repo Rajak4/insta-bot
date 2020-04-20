@@ -39,7 +39,6 @@ class InstaBot:
         sleep(2)
         total_following = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a/span').text
         num_scrolls = math.ceil(int(total_following) / 12)
-        print(num_scrolls)
         # Scroller gennem liste af dem man følger
         for i in range(0, num_scrolls):
             scr1 = self.driver.find_element_by_xpath('/html/body/div[4]/div/div[2]')
@@ -61,7 +60,6 @@ class InstaBot:
         sleep(2)
         total_followers = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a/span').text
         num_scrolls = math.ceil(int(total_followers) / 12)
-        print(num_scrolls)
         # Scroller gennem liste af dem man følger
         for i in range(0, num_scrolls):
             scr1 = self.driver.find_element_by_xpath('/html/body/div[4]/div/div[2]')
